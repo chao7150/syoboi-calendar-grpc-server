@@ -1,3 +1,3 @@
 [submodule "syoboi-calendar-proto"]
 	path = syoboi-calendar-proto
-	url = git@github.com:chao7150/syoboi-calendar-proto.git
+	url = https://github.com/chao7150/syoboi-calendar-proto.git
