@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@master
 
+      - name: checkout submodules
+        uses: textbook/git-checkout-submodule-action@master
+
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
@@ -17,7 +20,7 @@ jobs:
           username: chao
           password: hoge
           registry: docker.chao.tokyo
-
+      
       - name: send docker-compose.yml to server
         uses: appleboy/scp-action@master
         with:
