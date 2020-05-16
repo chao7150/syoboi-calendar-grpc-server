@@ -1,0 +1,13 @@
+version "3"
+
+services:
+  syoboi-calendar-grpc-server:
+    image: docker.chao.tokyo/syoboi-calendar-grpc-server:latest
+    ports:
+      - "50051"
+    env_file: .env
+
+networks:
+  default:
+    external:
+      name: common_link

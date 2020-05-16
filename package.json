@@ -1,0 +1,30 @@
+{
+  "name": "syoboi-calendar-grpc-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Satoru Yokoyama <22640673+chao7150@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn tsc",
+    "start": "node build/app/index.js",
+    "protoc": "yarn clean:proto && bash scripts/protoc.sh",
+    "clean:build": "rm -rf build/*",
+    "clean:proto": "rm -rf proto/*"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "axios": "^0.19.2",
+    "google-protobuf": "3.5.0",
+    "grpc": "^1.24.2"
+  },
+  "engines": {
+    "node": "12.16.2"
+  },
+  "devDependencies": {
+    "@types/google-protobuf": "^3.7.2",
+    "grpc-tools": "^1.8.1",
+    "grpc_tools_node_protoc_ts": "^3.0.0",
+    "prettier": "^2.0.5",
+    "typescript": "^3.8.3"
+  }
+}
