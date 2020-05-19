@@ -12,11 +12,10 @@ class SyoboiCalendarServer implements ISyoboiCalendarServer {
     call: grpc.ServerUnaryCall<SyoboiRequest>,
     callback: grpc.sendUnaryData<SyoboiResponse>,
   ) {
-    console.log(call.request.toString());
+    console.log(call.request.toObject());
     const rawSyoboiResponse = await fetch();
     const response = new SyoboiResponse();
     response.setProgramList(rawSyoboiResponse.items.map(convertor));
-    console.log(response);
     callback(null, response);
   }
 }
