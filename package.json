@@ -15,7 +15,8 @@
     "@grpc/proto-loader": "^0.5.4",
     "axios": "^0.19.2",
     "google-protobuf": "3.5.0",
-    "grpc": "^1.24.2"
+    "grpc": "^1.24.2",
+    "log4js": "^6.2.1"
   },
   "engines": {
     "node": "12.16.2"
